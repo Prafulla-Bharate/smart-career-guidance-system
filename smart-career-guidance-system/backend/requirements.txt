@@ -1,10 +1,43 @@
+# --- Web Frameworks ---
 fastapi
-uvicorn
+uvicorn[standard]
+streamlit
+
+# --- Data & ML ---
 pandas
 numpy
-xgboost
 scikit-learn
+xgboost
 sentence-transformers
 joblib
+
+# --- Resume Parsing (PDF) ---
+PyMuPDF==1.22.5
+pdfplumber
+python-docx
+
+# --- LangChain + Gemini LLM for Resume Parsing ---
+langchain
+langchain-google-genai
+google-generativeai
+
+# --- MongoDB ---
 pymongo
-python-multipart  # for resume upload using Form
+dnspython
+
+# --- Trend Analysis ---
+pytrends
+
+# --- Visualization ---
+plotly
+matplotlib
+seaborn
+streamlit-lottie
+
+# --- Web Scraping for Jobs/Skills ---
+requests
+beautifulsoup4
+
+# --- Other Utilities ---
+python-multipart
+fastapi[all]
