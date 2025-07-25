@@ -1,6 +1,6 @@
 # --- Web Frameworks ---
 fastapi
-uvicorn[standard]
+uvicorn
 streamlit
 
 # --- Data & ML ---
@@ -12,7 +12,7 @@ sentence-transformers
 joblib
 
 # --- Resume Parsing (PDF) ---
-PyMuPDF==1.22.5
+PyMuPDF
 pdfplumber
 python-docx
 
@@ -40,4 +40,4 @@ beautifulsoup4
 
 # --- Other Utilities ---
 python-multipart
-fastapi[all]
+fastapi
