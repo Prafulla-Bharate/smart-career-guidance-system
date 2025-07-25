@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pandas
+numpy
+xgboost
+scikit-learn
+sentence-transformers
+joblib
+pymongo
+python-multipart  # for resume upload using Form
