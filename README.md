@@ -10,26 +10,26 @@ A full-fledged AI-powered career recommendation platform built using **FastAPI +
 ## 📷 Screenshots
 
 ### 🔮 Career Predictor
-![Career Predictor](../img/career-trends.png)(../img/front.png)
+![Career Predictor](/img/career-trends.png)(../img/front.png)
 
 Predict top 3 careers from your academic and skill profile.
 
 ### 📄 Resume Analysis
-![Resume Upload](../img/resume.png)
+![Resume Upload](/img/resume.png)
 Parse PDF resumes and get top career predictions.
 
 ### 📈 Career Trend Insights
-![Career Trends](../img/career-trends2.png)
-![](../img/career-trends2.png)
-![](../img/career-trends3.png)
+![Career Trends](/img/career-trends2.png)
+![](/img/career-trends2.png)
+![](/img/career-trends3.png)
 Google Trends, Skills, Hiring Companies for any career.
 
 ### 💼 Jobs & 📚 Certification Recommendations
-![Jobs & Certs](../img/job-cert-recommend.png)
+![Jobs & Certs](/img/job-cert-recommend.png)
 Get real-time job listings and online course suggestions.
 
 ### 🤖 Chatbot Assistant
-![Chatbot](../img/chatbot.png)
+![Chatbot](/img/chatbot.png)
 Talk with the built-in AI chatbot to ask career questions.
 
 ---
