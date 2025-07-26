@@ -1,66 +1,141 @@
-💡 Smart Career Guidance System
-A machine learning-based web application built with Streamlit that recommends the most suitable career paths based on a student's academic stream, skills, interests, certifications, and CGPA. This system leverages multi-label encoding, a trained classification model, and real-time job trend data to deliver personalized, data-driven career guidance.
+# 🎓 Smart Career Guidance System
 
-🚀 Features
-🔮 Career Prediction: Based on academic and personal input or uploaded resume
+A full-fledged AI-powered career recommendation platform built using **FastAPI + Streamlit**. It predicts top careers from user profile or resume, recommends trending jobs and certifications, visualizes Google trends, and offers an AI chatbot assistant.
 
-🧠 Machine Learning Model: Trained classification model using scikit-learn
+---
 
-📑 Resume Parsing: Extracts relevant keywords (skills, interests, certs) from .txt or .pdf files
+## 🚀 Live Demo (Optional)
 
-🌐 Job Trend Fetching: Live job trend data from RapidAPI JSearch
+> You can deploy this on **Streamlit Cloud**
 
-📊 Confidence Score Visualization: Displays top 3 predictions with confidence bar chart
+---
 
-🎓 Course Suggestions: Auto-recommended Coursera and Udemy links for skill development
+## 📷 Screenshots
 
-🛠️ Tech Stack
-Component	Technology
-Frontend	Streamlit
-Backend	Python, scikit-learn, NLTK
-Visualization	Matplotlib, Seaborn
-NLP	NLTK (tokenizer, word cleaner)
-APIs	RapidAPI (JSearch for job data)
-Model Persistence	Joblib
+### 🔮 Career Predictor
+![Career Predictor](../screenshots/career-predictor.png)
+Predict top 3 careers from your academic and skill profile.
 
-📷 Screenshots
-Manual Input Form	Resume Upload Parsing
+### 📄 Resume Analysis
+![Resume Upload](../screenshots/resume-upload.png)
+Parse PDF resumes and get top career predictions.
 
-🧑‍💻 How to Run Locally
-bash
-Copy
-Edit
-# 1. Clone the repository
-git clone https://github.com/yourusername/smart-career-guidance.git
-cd smart-career-guidance
+### 📈 Career Trend Insights
+![Career Trends](../screenshots/career-trends.png)
+Google Trends, Skills, Hiring Companies for any career.
 
-# 2. Install dependencies
+### 💼 Jobs & 📚 Certification Recommendations
+![Jobs & Certs](../screenshots/job-cert.png)
+Get real-time job listings and online course suggestions.
+
+### 🤖 Chatbot Assistant
+![Chatbot](../screenshots/chatbot.png)
+Talk with the built-in AI chatbot to ask career questions.
+
+---
+
+## 🧠 Features
+
+- 🎓 Predict top 3 careers using AI
+- 📄 Upload and analyze resumes (PDF)
+- 📈 Google Trends + Skills + Companies
+- 💼 Realtime Job listings (via API scraping)
+- 📚 Certification suggestions
+- 🤖 Built-in Chatbot Assistant
+- 🌗 Dark/Light themes
+- 🎨 Modern UI with animations (Lottie)
+
+---
+
+## 🛠️ Technologies Used
+
+| Frontend     | Backend    | AI/ML       | Tools & APIs         |
+|--------------|------------|-------------|----------------------|
+| Streamlit    | FastAPI    | XGBoost     | Google Trends API    |
+| Lottie       | Uvicorn    | SentenceTransformer | Job Scraping     |
+| Plotly       |            | Pickle Models | OpenAI/Gemini Chat  |
+
+---
+
+## 📁 Folder Structure
+
+```bash
+smart-career-guidance-system/
+├── backend/
+│   ├── main.py                  # FastAPI backend
+│   ├── recommendation.py        # Jobs/Cert API
+│   ├── trends.py, skills.py     # Google Trends/skills
+│   └── chatbot.py               # Chat endpoint
+├── frontend/
+│   └── app.py                   # Streamlit app
+├── model/
+│   ├── model.pkl, scaler.pkl, encoder.pkl
+│   └── clean_balanced_student.csv
+
+
+---
+
+## ▶️ How To Run
+
+### 🔧 1. Clone the Project
+```bash
+git clone https://github.com/yourusername/smart-career-guidance-system
+cd smart-career-guidance-system
+```
+
+### ⚙️ 2. Install Requirements
+```bash
 pip install -r requirements.txt
+```
 
-# 3. Run the Streamlit app
-streamlit run app1.py
-⚠️ Note: Ensure career_model.pkl and encoder .pkl files are in the same directory.
+### 🧠 3. Start Backend (FastAPI)
+```bash
+uvicorn backend.main:app --reload
+```
 
-📁 Dataset and Model
-Trained on a synthetic/collected dataset of student profiles
+### 🖥️ 4. Start Frontend (Streamlit)
+```bash
+cd frontend
+streamlit run app.py
+```
 
-Multi-class classification model (e.g., Random Forest or Logistic Regression)
 
-Label encoders used for categorical and multi-label fields
+---
 
-✅ Future Enhancements
-🔐 User login system for personalized history
 
-☁️ Hosting on Streamlit Cloud or Render
+---
 
-🧾 Integration with LinkedIn Resume parser API
+## 🌐 API Endpoints
 
-🧠 Upgrade to Deep Learning with TensorFlow or PyTorch
+| Endpoint                        | Description                         |
+|-------------------------------|-------------------------------------|
+| `/predict-career/`           | Predicts top 3 careers              |
+| `/resume-career-predict/`    | Parses PDF & predicts               |
+| `/recommendations/{career}`  | Returns jobs & certifications       |
+| `/career-insights/{career}`  | Google trends, skills, companies    |
+| `/chatbot/`                  | Responds to user chat queries       |
 
-📜 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+---
 
-🙋‍♂️ Author
-Prafulla Bharate
-Data Science | Machine Learning | Web Apps
-LinkedIn • GitHub
+## 📌 Sample Usage (Chatbot)
+```json
+POST /chatbot/
+{
+  "query": "What are the best careers for someone with Python and ML skills?"
+}
+```
+
+---
+
+## 🧑‍💻 Contributors
+
+- [Your Name](https://github.com/Prafulla-Bharate)
+
+---
+
+## 📜 License
+MIT License
+
+---
+
+
